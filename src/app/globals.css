@@ -1,94 +1,236 @@
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @layer base {
-  .theme {
-    --font-heading: var(--font-sans);
-    --font-sans: var(--font-sans);
-  }
+  /* ─── WealthPath Design System ─── */
+
   :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
+    /* Core palette */
+    --wp-primary: #0D1117;
+    --wp-accent: #1A7F37;
+    --wp-accent-light: #2EA84F;
+    --wp-secondary: #58A6FF;
+    --wp-warning: #F59E0B;
+    --wp-danger: #CF222E;
+    --wp-surface: #F6F8FA;
+    --wp-surface-dark: #161B22;
+
+    /* shadcn variables — Light mode */
+    --background: 210 17% 97%;
+    --foreground: 215 28% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 10%;
+    --primary: 142 64% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 18% 94%;
+    --secondary-foreground: 215 28% 10%;
+    --muted: 210 18% 94%;
+    --muted-foreground: 215 14% 42%;
+    --accent: 210 18% 92%;
+    --accent-foreground: 215 28% 10%;
+    --destructive: 0 72% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 16% 89%;
+    --input: 214 16% 89%;
+    --ring: 142 64% 32%;
+    --chart-1: 142 64% 32%;
+    --chart-2: 211 80% 60%;
+    --chart-3: 40 90% 55%;
+    --chart-4: 280 60% 55%;
+    --chart-5: 0 72% 47%;
+    --radius: 1rem;
   }
+
+  /* ─── Dark Mode — Premium fintech dark ─── */
   .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --background: 215 28% 7%;
+    --foreground: 210 17% 90%;
+    --card: 215 25% 9%;
+    --card-foreground: 210 17% 90%;
+    --popover: 215 25% 9%;
+    --popover-foreground: 210 17% 90%;
+    --primary: 142 64% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 20% 14%;
+    --secondary-foreground: 210 17% 90%;
+    --muted: 215 20% 14%;
+    --muted-foreground: 215 12% 54%;
+    --accent: 215 20% 16%;
+    --accent-foreground: 210 17% 90%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 210 17% 90%;
+    --border: 215 18% 19%;
+    --input: 215 18% 21%;
+    --ring: 142 64% 38%;
+    --chart-1: 142 64% 42%;
+    --chart-2: 211 80% 60%;
+    --chart-3: 40 90% 55%;
+    --chart-4: 280 60% 55%;
+    --chart-5: 0 72% 50%;
   }
+
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-sans;
+}
+
+/* ─── Tabular Numerals for financial data ─── */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Card hover lift ─── */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -6px rgba(0, 0, 0, 0.05);
+}
+.dark .card-hover:hover {
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.3), 0 4px 10px -6px rgba(0, 0, 0, 0.2);
+}
+.card-hover:active {
+  transform: scale(0.98);
+}
+
+/* ─── Shimmer animation ─── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+.dark .shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* ─── Celebration bar shine ─── */
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  animation: shine 3s ease-in-out infinite;
+}
+
+/* ─── Streak Flame Tiers ─── */
+@keyframes flame-flicker {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  25% { transform: scale(1.05) rotate(-2deg); opacity: 0.9; }
+  50% { transform: scale(1.1) rotate(1deg); opacity: 1; }
+  75% { transform: scale(1.03) rotate(-1deg); opacity: 0.95; }
+}
+
+/* Tier 1: days 1-6 */
+.flame-animate {
+  animation: flame-flicker 1.5s ease-in-out infinite;
+  color: #F97316;
+}
+
+/* Tier 2: days 7-29 */
+.flame-medium {
+  animation: flame-flicker 1s ease-in-out infinite;
+  color: #FB923C;
+  filter: drop-shadow(0 0 3px rgba(251, 146, 60, 0.4));
+}
+
+/* Tier 3: days 30-99 */
+.flame-intense {
+  animation: flame-flicker 0.7s ease-in-out infinite;
+  color: #FBBF24;
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.5));
+}
+
+/* Tier 4: days 100+ — blue core gas flame */
+.flame-legendary {
+  animation: flame-flicker 0.5s ease-in-out infinite;
+  color: #60A5FA;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.6)) drop-shadow(0 0 16px rgba(96, 165, 250, 0.3));
+}
+
+/* ─── Checkbox burst animation ─── */
+@keyframes check-burst {
+  0% { transform: scale(0); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+.check-burst::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid hsl(142 64% 38%);
+  animation: check-burst 0.4s ease-out forwards;
+}
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+@layer utilities {
+  .text-wealth-green {
+    color: var(--wp-accent-light);
+  }
+  .text-wealth-blue {
+    color: var(--wp-secondary);
+  }
+  .text-wealth-gold {
+    color: var(--wp-warning);
+  }
+  .bg-wealth-green {
+    background-color: var(--wp-accent);
+  }
+  .gradient-wealth {
+    background: linear-gradient(135deg, var(--wp-accent) 0%, var(--wp-secondary) 100%);
+  }
+  .gradient-wealth-subtle {
+    background: linear-gradient(135deg, rgba(26, 127, 55, 0.1) 0%, rgba(88, 166, 255, 0.1) 100%);
+  }
+  .font-heading {
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 }

@@ -1,7 +1,7 @@
 import { TrendingUp } from "lucide-react";
 import Link from "next/link";
-import { SignOutButton } from "@/components/auth-button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { ResetDemoButton } from "@/components/reset-demo";
 import { Sidebar } from "@/components/nav/sidebar";
 import { BottomNav } from "@/components/nav/bottom-nav";
 import { OfflineBanner } from "@/components/pwa/offline-banner";
@@ -25,7 +25,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             </Link>
             <div className="flex items-center gap-1">
               <ThemeToggle />
-              <SignOutButton />
+              <ResetDemoButton />
             </div>
           </div>
         </header>
@@ -34,7 +34,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         <header className="hidden lg:flex items-center justify-end h-14 border-b border-border px-6 bg-card/30">
           <div className="flex items-center gap-1">
             <ThemeToggle />
-            <SignOutButton />
+            <ResetDemoButton />
           </div>
         </header>
 

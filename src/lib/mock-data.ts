@@ -26,8 +26,8 @@ const today = dateStr(0);
 // ─── Mock User ───
 export const MOCK_USER = {
   id: "user-001-mock",
-  email: "partha@wealthpath.app",
-  name: "Partha",
+  email: "alex@wealthpath.app",
+  name: "Alex",
 };
 
 // ─── Goal ───

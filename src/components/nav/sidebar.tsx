@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ResetDemoButton } from "@/components/reset-demo";
 import {
   LayoutDashboard,
   Map,
@@ -74,7 +75,10 @@ export function Sidebar() {
         })}
       </nav>
 
-      {/* Collapse toggle */}
+      {/* Reset demo + Collapse toggle */}
+      <div className="p-2 border-t border-border space-y-1">
+        {!collapsed && <ResetDemoButton />}
+      </div>
       <div className="p-2 border-t border-border">
         <Button
           variant="ghost"

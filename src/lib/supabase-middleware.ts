@@ -8,8 +8,10 @@ export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
   // Skip auth if Supabase is not configured (dev with placeholder keys)
+  // Also skip when DEMO_MODE is enabled (allow unauthenticated access)
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  if (!supabaseUrl || !supabaseUrl.startsWith("http")) {
+  const demoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
+  if (!supabaseUrl || !supabaseUrl.startsWith("http") || demoMode) {
     return supabaseResponse;
   }
 

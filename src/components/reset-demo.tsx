@@ -1,19 +1,14 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { RotateCcw } from "lucide-react";
 
 export function ResetDemoButton() {
-  const router = useRouter();
-
   const handleReset = () => {
-    // Clear any localStorage state
     localStorage.removeItem("wp-visits");
     localStorage.removeItem("wp-install-dismissed");
     sessionStorage.removeItem("wp-splash-shown");
-    // Navigate to onboarding
-    router.push("/onboarding");
+    window.location.href = "/onboarding";
   };
 
   return (

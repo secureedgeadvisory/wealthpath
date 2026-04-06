@@ -196,9 +196,9 @@ export default function LandingPage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
-            <Link href="/login">
+            <Link href="/dashboard">
               <Button variant="outline" size="lg" className="h-13 text-base min-w-[140px]">
-                Sign In
+                Try Demo
               </Button>
             </Link>
           </motion.div>

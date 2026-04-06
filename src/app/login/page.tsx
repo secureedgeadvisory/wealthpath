@@ -127,8 +127,20 @@ export default function LoginPage() {
           </CardContent>
         </Card>
 
-        <p className="text-xs text-center text-muted-foreground">
-          No password needed. We&apos;ll email you a secure sign-in link.
+        <div className="flex items-center gap-3 my-2">
+          <div className="flex-1 h-px bg-border" />
+          <span className="text-xs text-muted-foreground">or</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+
+        <Link href="/dashboard">
+          <Button variant="outline" className="w-full h-11">
+            Try Demo Account
+          </Button>
+        </Link>
+
+        <p className="text-xs text-center text-muted-foreground mt-3">
+          No sign-up needed. Explore with sample data.
         </p>
       </div>
     </div>

@@ -25,7 +25,7 @@ export default function LoginPage() {
             </p>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Link href="/dashboard">
+            <Link href="/onboarding">
               <Button className="w-full h-12 gradient-wealth text-white text-base">
                 <Sparkles className="w-4 h-4 mr-2" />
                 Try Demo Account

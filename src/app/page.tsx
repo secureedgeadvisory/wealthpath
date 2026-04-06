@@ -196,7 +196,7 @@ export default function LandingPage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
-            <Link href="/dashboard">
+            <Link href="/onboarding">
               <Button variant="outline" size="lg" className="h-13 text-base min-w-[140px]">
                 Try Demo
               </Button>
